@@ -1,3 +1,8 @@
+
+
+
+
+
 # NETWORKWALKS-B083-WK1-PM1-CYBERSECURITY(soc)-LAB-SETUP
 phase-1
 Step 1. Download & install 7-zip: https://7-zip.org/download.html
