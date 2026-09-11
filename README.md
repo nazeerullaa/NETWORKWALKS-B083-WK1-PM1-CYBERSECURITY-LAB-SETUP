@@ -1,9 +1,98 @@
-
-
-
-
-
 # NETWORKWALKS-B083-WK1-PM1-CYBERSECURITY(soc)-LAB-SETUP
+# 🔐 Cybersecurity Lab Environment
+
+**Building an isolated virtual cybersecurity lab using VirtualBox, Kali Linux, and Windows 10**
+
+![Cybersecurity](https://img.shields.io/badge/Skill-Cybersecurity-404040?style=flat-square&labelColor=C00000)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-7.x-0070C0?style=flat-square&labelColor=000000)
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-Linux-557C94?style=flat-square&labelColor=000000)
+![Windows 10](https://img.shields.io/badge/Windows%2010-Target-0078D6?style=flat-square&labelColor=000000)
+![Networking](https://img.shields.io/badge/Networking-10.0.0.0%2F24-238F89?style=flat-square&labelColor=000000)
+![Penetration Testing](https://img.shields.io/badge/Penetration%20Testing-000000?style=flat-square&labelColor=000000)
+
+---
+
+## 📌 Project Overview
+
+This project focuses on building a **controlled cybersecurity laboratory** using VirtualBox, Kali Linux, and Windows 10.
+
+The lab provides an isolated environment for learning and practicing cybersecurity concepts such as:
+
+- Network reconnaissance
+- Port scanning
+- Vulnerability assessment
+- Packet analysis
+- Windows security monitoring
+- Linux security tools
+- Web security testing
+- Penetration-testing fundamentals
+
+The environment is designed so that Kali Linux can be used as the security-testing machine and Windows 10 can be used as a controlled target machine.
+
+---
+
+## 🎯 Objectives
+
+The main objectives of this project are to:
+
+- Install and configure VirtualBox.
+- Set up Kali Linux as the security-testing VM.
+- Set up Windows 10 as a target VM.
+- Create a private virtual network.
+- Configure communication between the virtual machines.
+- Verify IP addressing and network connectivity.
+- Perform basic network reconnaissance.
+- Practice port scanning in the isolated lab.
+- Capture and analyze network traffic.
+- Create VM snapshots for recovery.
+- Document the complete cybersecurity lab.
+
+---
+
+## 🏗️ Lab Architecture
+
+```text
+                    HOST COMPUTER
+                          │
+                      VirtualBox
+                          │
+              ┌───────────┴───────────┐
+              │                       │
+         KALI LINUX               WINDOWS 10
+       Security VM                Target VM
+              │                       │
+              └───────────┬───────────┘
+                          │
+                 Private Lab Network
+                     10.0.0.0/24
+```
+
+## ⚙️ Lab Configuration
+
+| 🧩 Component | ⚙️ Configuration |
+|---|---|
+| 🖥️ Host OS | Windows 10 |
+| 🧠 Host RAM | 8 GB |
+| ⚡ Processor | Intel Core i7 |
+| 🧰 Hypervisor | VirtualBox 7.2 |
+| 🐉 Security OS | Kali Linux 2026.2 |
+| 🧠 Kali RAM | 2048 MB |
+| 🌐 Virtual Network | NAT Network |
+| 📡 Network Address | 10.0.0.0/24 |
+| 🐧 Kali IP Address | 10.0.0.2/24 |
+| 🚪 Default Gateway | 10.0.0.1 |
+
+
+
+
+
+| Machine    | Role                        | Operating System |
+| ---------- | --------------------------- | ---------------- |
+| Kali Linux | Security / Testing Machine  | Kali Linux       |
+| Windows 10 | Target / Monitoring Machine | Windows 10       |
+
+
+
 phase-1
 Step 1. Download & install 7-zip: https://7-zip.org/download.html
 
@@ -72,7 +161,115 @@ step 7.select language allow the permission
 
 <img width="953" height="597" alt="Screenshot 2026-09-10 173121" src="https://github.com/user-attachments/assets/942dfb7e-0e50-4ef8-9b2b-6def9e708adf" />
 
+🌐 Network Configuration
 
+The virtual machines are configured on a private virtual network.
+
+Example:
+Network:       10.0.0.0/24
+
+Kali Linux:    10.0.0.x
+Windows 10:    10.0.0.x
+
+
+🛠️ Tools & Technologies
+-Virtualization
+-VirtualBox
+-Operating Systems
+-Kali Linux
+-Windows 10
+-Security Tools
+-Nmap
+-Wireshark
+-Metasploit Framework
+-Burp Suite
+-Netcat
+-Networking
+-TCP/IP
+-IPv4
+-DNS
+-NAT
+-Private IP addressing
+-Ports and protocols
+🔍 Lab Activities
+1. Network Discovery
+
+Identify the machines available inside the isolated lab network.
+
+Example:
+
+nmap -sn 10.0.0.0/24
+2. Port Scanning
+
+Perform authorized port scanning against the Windows 10 VM.
+
+nmap <WINDOWS-IP>
+
+The objective is to understand:
+
+Open ports
+Closed ports
+Running services
+Network exposure
+3. Service Enumeration
+
+Identify services running on the target machine.
+
+nmap -sV <WINDOWS-IP>
+4. Packet Analysis
+
+Wireshark can be used to capture and analyze traffic between the virtual machines.
+
+Topics investigated:
+
+TCP traffic
+UDP traffic
+DNS queries
+ICMP
+TCP three-way handshake
+Source and destination IP addresses
+Source and destination ports
+5. Vulnerability Assessment
+
+The Windows 10 VM can be used as a controlled target for vulnerability-assessment exercises.
+
+All testing is restricted to the isolated lab environment.
+
+
+🔐 Security Considerations
+
+This laboratory is intended only for education and authorized security testing.
+
+The security-testing activities performed in this repository should only target:
+
+Systems owned by me
+Virtual machines created for testing
+Systems for which explicit authorization has been provided
+
+Testing external or unauthorized systems is not part of this project.
+
+📚 Learning Outcomes
+
+Through this project, I developed practical understanding of:
+
+-Virtual machine configuration
+-Linux security environment
+-Windows target environment
+-Virtual networking
+-IP addressing
+-Network reconnaissance
+-Port scanning
+-Service enumeration
+-Packet analysis
+-Cybersecurity lab management
+-Ethical penetration-testing practices
+
+
+⚠️ Disclaimer
+
+This project is created strictly for educational purposes and authorized security testing.
+
+Do not use the techniques or tools demonstrated here against systems without proper authorization.
 
 
 
